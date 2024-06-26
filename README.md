@@ -24,5 +24,9 @@ This coding quiz consists of a Playwright automation script task.
    - Click on the "Pull Request" button.
    - Provide a descriptive title and any additional comments if necessary.
    - Submit the pull request.
-
+5. **Run Tests:**
+   - `npx playwright test`
+6. **Generate HTML Report:**
+   - `npx playwright show-report src/playwright-report`
+   
 Remember to adhere to the time limit of 60 minutes and ensure that all requested files are included in your pull request. Good luck!
