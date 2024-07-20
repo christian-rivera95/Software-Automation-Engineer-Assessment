@@ -1,3 +1,5 @@
+/* Locators variables are created here*/
+
 export const LoginLocators = {
     username:'input[id="username"]',
     password: 'input[id="password"]',

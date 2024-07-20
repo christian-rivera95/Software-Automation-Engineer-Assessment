@@ -43,22 +43,27 @@ export class LoginPage extends BasePage {
             await this.clickOn(LoginLocators.loginbutton);
         }
 
+        /* when login is successful, this message error must be hidden */
         async checkErrorMessageToBeHidden(){
             await this.expectHidden(LoginLocators.errormessage);
         }
 
+         /* when login fails, this message error must be visible and display the respective text */
         async checkErrorMessageToBeVisible(){
             await this.expectVisible(LoginLocators.errormessage);
         }
 
+        /* to check if the new page contains this url */
         async checkNewUrl(){
             await this.whatIsTheUrl('practicetestautomation.com/logged-in-successfully/');
         }
 
+        /* to check if our body page contains this text after the login */
         async checkTextInPage(){
             await this.expectHaveText(LoginLocators.newpage, "Congratulations", "successfully logged in");
         }
 
+        /* this texts should be displayed when the login fails */
         async checkTextErrorMessage(){
             await this.expectHaveText(LoginLocators.errormessage, "Your username is invalid!", "Your password is invalid!");
         }
